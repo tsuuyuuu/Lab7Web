@@ -17,7 +17,7 @@ Proyek ini dibuat hanya untuk memenuhi tugas Pemograman Web 2.
 
 ## 📸 Dokumentasi Langkah-langkah
 
-> Semua screenshot hasil langkah-langkah disimpan dalam folder `Dokumentasi/` di dalam proyek.
+> Semua screenshot hasil langkah-langkah disimpan dalam folder `screenshoots/` di dalam proyek.
 
 ---
 
@@ -26,5 +26,6 @@ Proyek ini dibuat hanya untuk memenuhi tugas Pemograman Web 2.
 - konfigurasi ekstensi pada webserver xampp
 - Install dan ekstrak CodeIgniter 4 ke dalam folder `htdocs/lab11_ci/ci4`.
 - menjalankan CLI (Command Line Interface) dengan perintah
+  
   ```php spark```
   
