@@ -11,7 +11,7 @@
 
 ## 📁 Deskripsi Singkat
 
-Proyek ini dibuat hanya untuk memenuhi tugas Pemograman Web 2.
+Proyek ini dibuat hanya untuk memenuhi tugas Pemrograman Web 2.  
 
 ---
 
@@ -23,12 +23,15 @@ Proyek ini dibuat hanya untuk memenuhi tugas Pemograman Web 2.
 
 ### 🔧 Praktikum 1: Setup Project CodeIgniter 4
 
-- konfigurasi ekstensi pada webserver xampp
-- Install dan ekstrak CodeIgniter 4 ke dalam folder `htdocs/lab11_ci/ci4`.
-- menjalankan CLI (Command Line Interface) dengan perintah
-  
+- Konfigurasi ekstensi pada webserver XAMPP
+- Install dan ekstrak CodeIgniter 4 ke dalam folder `htdocs/lab11_ci/ci4`
+- Menjalankan CLI (Command Line Interface) dengan perintah:
+
+
   ```php spark```
 
 
   !(screenshoots/1.png)
 
+
+  
