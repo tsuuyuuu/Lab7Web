@@ -28,4 +28,7 @@ Proyek ini dibuat hanya untuk memenuhi tugas Pemograman Web 2.
 - menjalankan CLI (Command Line Interface) dengan perintah
   
   ```php spark```
-  
+
+
+  !(screenshoots/1.png)
+
