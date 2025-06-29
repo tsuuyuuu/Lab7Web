@@ -1,0 +1,16 @@
+# ⛔ Abaikan file debugbar (CodeIgniter Debug Toolbar)
+writable/debugbar/
+
+# ⛔ Abaikan file log aplikasi
+writable/logs/
+
+# ⛔ Abaikan session pengguna
+writable/session/
+
+# ⛔ Abaikan file sementara editor
+*.swp
+*.swo
+
+# ⛔ Abaikan file sistem
+.DS_Store
+Thumbs.db
