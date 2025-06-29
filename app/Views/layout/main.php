@@ -6,7 +6,7 @@
     <title><?= $title ?? 'My Website' ?></title>
     <link rel="stylesheet" href="<?= base_url('style.css'); ?>" >
 </head>
-<bo<div id="container">
+<body> <div id="container">
         <header>
             <h1>Layout Sederhana</h1>
         </header>

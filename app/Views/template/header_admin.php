@@ -12,7 +12,7 @@
             <h1>Admin Portal Berita</h1>
         </header>
         <nav>
-            <a href="<?= base_url('/artikel'); ?>" class="active">Home</a>
+            <a href="<?= base_url('/admin/artikel'); ?>" class="active">Home</a>
             <a href="<?= base_url('/admin/artikel'); ?>" >Artikel</a>
             <a href="<?= base_url('/admin/artikel/add/'); ?>" >Tambah Artikel</a>
             <a href="<?= base_url('/user/login/'); ?>" >Logout</a>

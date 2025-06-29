@@ -17,9 +17,11 @@ class Artikel extends BaseController
     public function view($slug)
     {
         $model      = new ArtikelModel();
-        $artikel    = $model->where ([
-            'slug'  => $slug
-        ]) ->first();
+          $artikel = $model
+            ->select('artikel.*, kategori.nama_kategori')
+            ->join('kategori', 'kategori.id_kategori = artikel.id_kategori')
+            ->where('artikel.slug', $slug)
+            ->first();
 
         // menampilkan error apabila data tidak ada
         if (!$artikel)
@@ -28,7 +30,8 @@ class Artikel extends BaseController
         }
 
         $title      = $artikel['judul'];
-        return view('artikel/detail', compact('artikel', 'title'));
+        return view('artikel/detail', ['title' => $artikel['judul'],
+            'artikel' => $artikel]);
     }
 
     public function admin_index()
@@ -95,7 +98,7 @@ class Artikel extends BaseController
         return view('artikel/form_edit', compact('title', 'data'));
     }
     
-    public function delete()
+    public function delete($id)
     {
         $artikel = new ArtikelModel();
         $artikel->delete($id);
