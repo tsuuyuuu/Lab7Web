@@ -1,5 +1,7 @@
-</section> 
-            <aside id="sidebar"> 
+<?= $this->renderSection('content') ?>
+            </section>
+            <aside id="sidebar">
+                <?= view_cell('App\\Cells\\ArtikelTerkini::render') ?>
                 <div class="widget-box"> 
                     <h3 class="title">Widget Header</h3> 
                     <ul> 

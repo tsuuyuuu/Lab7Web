@@ -2,20 +2,15 @@
 
 namespace App\Cells;
 
-use CodeIgniter\View\Cell;
 use App\Models\ArtikelModel;
 
-class ArtikelTerkini extends Cell
+class ArtikelTerkini
 {
-    public function render() : string
+    public function render()
     {
         $model = new ArtikelModel();
-        $artikel = $model->orderBy('created_at', 'DESC')->set_time_limit(5)-findAll();
-        
+        $artikel = $model->orderBy('created_at', 'DESC')->limit(5)->findAll();
+
         return view('components/artikel_terkini', ['artikel' => $artikel]);
-        
     }
 }
-
-
-
