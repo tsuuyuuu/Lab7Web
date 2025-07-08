@@ -68,6 +68,7 @@ Proyek ini dibuat hanya untuk memenuhi tugas Pemrograman Web 2.
 9. **Tambahkan CSS**
   ![about](screenshots/4.png)
 
+---
 
 ### 🔧 Praktikum 2: Framework Lanjutan (CRUD)
 
@@ -102,7 +103,65 @@ Proyek ini dibuat hanya untuk memenuhi tugas Pemrograman Web 2.
 12. **Menghapus data**
   - tambah method di Controller Artikel dengan nama delete()
 
+---
 
-### 🔧 Praktikum 3: View Layout dan Viem Cell
+## Pratikum 3: View Layout dan View Cell
 
-1. **Membuat Layout Utama**
+1. **Membuat page beranda menggunakan Layout Sederhana**
+
+![Page beranda menggunakan Layout Sederhana ](screenshots/11.png)
+
+2. **Menambahkan View Cell**
+ untuk menampilkan data dari database (menambahkan create_at)
+
+![Menambahkan create_at pada database ](screenshots/12.png)
+
+## Manfaat Pakai View Layout
+
+Pakai View Layout di CodeIgniter 4 itu sangat membantu untuk buat kerangka tampilan yang konsisten di seluruh halaman. Beberapa manfaat utamanya:
+
+- **Minim duplikasi** — Header, footer, sidebar cukup ditulis sekali, dan bisa dipakai di semua halaman.
+- **Lebih gampang maintenance** — Mau ubah tampilan? Cukup edit di satu file layout aja, gak perlu bongkar satu-satu.
+- **Tampilan seragam** — Semua halaman punya gaya yang sama, jadi lebih profesional dan rapi dilihat.
+
+---
+
+## Bedanya View Cell vs View Biasa
+
+### View Cell
+- Komponen kecil dan bisa dipakai ulang (contoh: kartu produk, widget user, dll).
+- Punya logika sendiri, gak perlu di-handle controller utama.
+- Bisa dikasih parameter biar fleksibel tampilannya.
+
+### View Biasa
+- Dipakai buat nampilin satu halaman penuh atau bagian besar (misalnya: dashboard, daftar artikel).
+- Butuh data dari controller utama.
+- Fokus ke tampilan aja, gak punya logika terpisah.
+
+---
+
+ ## Pratikum 4: Modul Login
+
+1. **Membuat tabel user**
+
+![tabel user ](screenshots/13.png)
+
+2. **Membuat page login**
+ 
+![Membuat Page login ](screenshots/14.png)
+
+- User Membutukan login saat masuk ke page artikel
+
+![Page login saat masuk ke page artikel ](screenshots/15.png)
+
+## Pratikum 5: Pagination dan Pencarian
+
+1. **Membuat Pagination & Pencarian**
+
+![Pagination dan Pencarian ](screenshots/16.png)
+
+## Pratikum 6: Upload File Gambar
+
+1. **Membuat Upload File Gambar**
+
+![Membuat Upload File Gambar ](screenshots/17.png)
