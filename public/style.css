@@ -1,158 +1,215 @@
-/* import google font */ 
-@import 
-url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap'); 
-@import 
-url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap'); 
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
 
 /* reset CSS */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    line-height: 1;
-    font-size: 100%;
-    font-family: 'Open Sans', sans-serif;
-    color: #5a5a5a;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+    /* Light background */
+    padding: 20px;
 }
 
 #container {
-    width: 980px;
-    margin: 0 auto;
-    box-shadow: 0 0 1em #cccccc;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    /* Clear floats */
 }
 
-/* header */
+/* Header Styling */
 header {
-    padding: 20px;
+    background: #ffffff;
+    /* Darker gradient */
+    color: #ecf0f1;
+    padding: 30px 20px;
+    text-align: center;
+    /* Accent color */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    /* Subtle overlay for texture */
+    pointer-events: none;
+    z-index: 1;
 }
 
 header h1 {
-    margin: 20px 10px;
-    color: #b5b5b5;
+    margin: 0;
+    font-size: 3.8em;
+    /* Larger, more impactful title */
+    font-weight: 700;
+    /* Bold font */
+    letter-spacing: 3px;
+    /* Increased letter spacing */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    /* Stronger text shadow */
+    text-transform: uppercase;
+    /* All caps for prominence */
+    position: relative;
+    /* To bring text above ::before */
+    z-index: 2;
 }
-/* Navigasi */
+
+/* Navigation Bar Styling */
 nav {
-    display: block;
-    background-color: #1f5faa;
+    background: #1f5faa;
+    /* Slightly lighter than header */
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
-    padding: 15px 30px;
-    display: inline-block;
-    color: #ffffff;
-    font-size: 14px;
+    color: #ecf0f1;
     text-decoration: none;
-    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+    font-size: 1.1em;
 }
 
-nav a.active,
-nav a:hover {
+nav a:hover,
+nav a.active {
     background-color: #2b83ea;
-}
-
-
-/* main content*/
-#wrapper {
-    margin: 0;
-}
-#main {
-    float: left;
-    width: 640px;
-    padding: 20px;
-}
-
-/* sidebar area*/
-#sidebar {
-    float: left;
-    width: 260px;
-    padding: 20px;
-}
-
-/* widget */
-.widget-box {
-    border: 1px solid #eee;
-    margin-bottom: 20px;
-}
-.widget-box  .title {
-    padding: 10px 16px;
-    background-color: #428bca;
+    /* Accent color on hover/active */
     color: #fff;
 }
+
+/* Wrapper and Section Styling */
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
+    padding: 20px;
+    gap: 20px;
+    /* Space between main and sidebar */
+}
+
+#main {
+    flex: 3;
+    /* Takes up more space */
+    min-width: 60%;
+    /* Ensures it doesn't get too small */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#sidebar {
+    flex: 1;
+    /* Takes up less space */
+    min-width: 300px;
+    /* Minimum width for sidebar */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Widget Box Styling */
+.widget-box {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.widget-box .title {
+    font-size: 1.4em;
+    color: #34495e;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 10px;
+}
+
 .widget-box ul {
     list-style-type: none;
+    padding: 0;
 }
-.widget-box li {
-    border-bottom: 1px solid #eee;
+
+.widget-box ul li {
+    margin-bottom: 10px;
 }
-.widget-box li a {
-    padding: 10px 16px;
-    color: #333;
-    display: block;
+
+.widget-box ul li a {
     text-decoration: none;
+    color: #2980b9;
+    transition: color 0.3s ease;
 }
-.widget-box li:hover a {
-    background-color: #eee;
+
+.widget-box ul li a:hover {
+    color: #1abc9c;
+    text-decoration: underline;
 }
+
 .widget-box p {
-    padding: 15px;
-    line-height: 25px;
-}
-/*pagination*/
-/* Khusus untuk pagination nav */
-
-ul.pagination {
-    display: flex;
-    justify-content: left;
-    padding: 10px 0;
-    list-style: none;
-    margin: 0;
+    font-size: 0.95em;
+    color: #555;
 }
 
-ul.pagination li {
-    margin: 0 5px;
-}
-
-ul.pagination li a,
-ul.pagination li span {
-    display: inline-block;
-    padding: 8px 14px;
-    background-color: #e0e0e0;
-    color: #000;
-    text-decoration: none;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-}
-
-ul.pagination li a:hover {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-}
-
-ul.pagination li.active span {
-    background-color: #007bff;
-    color: white;
-    border: 1px solid #007bff;
-    font-weight: bold;
-}
-
-
-/* footer */
+/* Footer Styling */
 footer {
-    clear: both;
-    background-color: #1d1d1d;
+    background: #000000;
+    color: #ecf0f1;
+    text-align: center;
     padding: 20px;
-    color: #eee;
+    margin-top: 20px;
+    border-radius: 0 0 8px 8px;
+    /* Match container border-radius */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #wrapper {
+        flex-direction: column;
+        /* Stack main and sidebar vertically */
+    }
+
+    #main,
+    #sidebar {
+        min-width: 100%;
+        /* Full width on small screens */
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
 }
 
 
 
 /* === Table Styling === */
 .table {
-    width: 140%;
+    width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
@@ -167,7 +224,8 @@ footer {
     color: white;
 }
 
-.table th, .table td {
+.table th,
+.table td {
     padding: 12px;
     text-align: left;
     border: 1px solid #ccc;
@@ -175,6 +233,34 @@ footer {
 
 .table tbody tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+/* === Search Form Styling === */
+/* === Search Form Styling === */
+form .form-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.form-search input[type="text"] {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-search .btn-search {
+    padding: 10px 20px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 /* === Button Styling === */
@@ -199,7 +285,7 @@ footer {
 
 .btn-danger:hover {
     background-color: #c82333;
-}   
+}
 
 /* === Form Tambah Artikel === */
 form {
@@ -244,7 +330,7 @@ form button:hover,
 form input[type="submit"]:hover {
     background-color: #084298;
 }
- 
+
 
 /*login form*/
 #login-wrapper {

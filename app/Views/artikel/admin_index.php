@@ -1,7 +1,7 @@
 <?= $this->include('template/header_admin'); ?>
 <form method="get" class="form-search">
     <input type="text" name="q" value="<?= $q; ?>" placeholder="Cari data">
-    <input type="submit" value="Cari" class="btn btn=primary">
+    <input type="submit" value="Cari" class="btn-search">
 </form>
 
 <table class="table">
@@ -42,7 +42,7 @@
         </tr>
     </tfoot>
 </table>
-<section id="wrapper">
+<section id="wrapper" >
     <?= $pager->only(['q'])->links(); ?>
 </section>
 <?= $this->include('template/footer_admin'); ?>
