@@ -160,11 +160,16 @@ Pakai View Layout di CodeIgniter 4 itu sangat membantu untuk buat kerangka tampi
 
 ![Pagination dan Pencarian ](screenshots/16.png)
 
+--
+
+
 ## Pratikum 6: Upload File Gambar
 
 1. **Membuat Upload File Gambar**
 
 ![Membuat Upload File Gambar ](screenshots/17.png)
+
+--
 
 ## Praktikum 7: Relasi Tabel dan Query Builder 
 
@@ -180,3 +185,19 @@ Pakai View Layout di CodeIgniter 4 itu sangat membantu untuk buat kerangka tampi
 3. **Relasi Table Artikel dengan Kategori di Tampilan utama**
 
 ![Membuat Tabel Kategori ](screenshots/20.png)
+
+--
+
+## Praktikum 7: Relasi Tabel dan Query Builder 
+
+1. **Menambahkan Pustaka JQuery**
+- Salin file jquery-3.7.1.min.js 
+- Masukkan di Folder public/assets/js
+
+2. **Relasi Tabel di Tampilan Admin**
+
+![Tampilan Halaman AJAX](screenshots/21.png)
+
+3. **Relasi Table Artikel dengan Kategori di Tampilan utama**
+
+![Fitur Edit data](screenshots/22.png)

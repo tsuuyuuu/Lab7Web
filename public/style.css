@@ -408,3 +408,113 @@ button[type="submit"]:hover {
     margin-bottom: 20px;
     text-align: center;
 }
+
+/* Card styling */
+.card {
+    background: #fff0f6;
+    border: 2px solid #f8c3d2;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+    margin-bottom: 40px;
+}
+.card-body form div:last-child {
+    text-align: right;
+    margin-top: 10px;
+}
+.card-body .form-label {
+    margin-bottom: 5px;
+}
+
+
+/* Form style */
+#artikelForm .form-label {
+    font-weight: bold;
+    color: #c2185b;
+}
+#artikelForm .form-control {
+    border-radius: 10px;
+    border: 1px solid #f48fb1;
+}
+
+/* Button style */
+.btn-edit-girly,
+.btn-success,
+.btn-warning,
+.btn-info,
+.btn-danger {
+    background-color: #f06292;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+.btn-edit-girly:hover,
+.btn-success:hover,
+.btn-warning:hover,
+.btn-info:hover,
+.btn-danger:hover {
+    background-color: #ec407a;
+    color: white;
+}
+
+/* Table style */
+.table-data {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 20px;
+    background-color: #fff5f8;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 8px rgba(255, 192, 203, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-data th, .table-data td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f8c3d2;
+    text-align: center;
+}
+
+.table-data thead th {
+    background-color: #f9c9dc;
+    color: #880e4f;
+    font-weight: bold;
+    border-bottom: 2px solid #ffb6c1;
+}
+  
+/* Status badge */
+.status {
+    padding: 4px 8px;
+    border-radius: 10px;
+    background-color: #f48fb1;
+    color: white;
+    font-size: 0.9rem;
+}
+.btn-edit {
+    background-color: #ff66a3;
+    color: white;
+    border: none;
+}
+
+.btn-delete {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+}
+
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+    .card, .table-data {
+        width: 100%;
+    }
+
+    .btn-edit, .btn-delete {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
