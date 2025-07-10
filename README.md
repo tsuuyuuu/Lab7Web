@@ -165,3 +165,18 @@ Pakai View Layout di CodeIgniter 4 itu sangat membantu untuk buat kerangka tampi
 1. **Membuat Upload File Gambar**
 
 ![Membuat Upload File Gambar ](screenshots/17.png)
+
+## Praktikum 7: Relasi Tabel dan Query Builder 
+
+1. **Membuat Tabel Kategori**
+
+![Membuat Tabel Kategori ](screenshots/18.png)
+
+
+2. **Relasi Tabel di Tampilan Admin**
+
+![Membuat Tabel Kategori ](screenshots/19.png)
+
+3. **Relasi Table Artikel dengan Kategori di Tampilan utama**
+
+![Membuat Tabel Kategori ](screenshots/20.png)

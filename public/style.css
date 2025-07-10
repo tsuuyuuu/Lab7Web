@@ -1,398 +1,410 @@
-/* import google font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+/* === Import Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700&display=swap');
 
-/* reset CSS */
+/* === Reset CSS === */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* === Body === */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f7f6;
-    /* Light background */
+    background-color: #f7ebef;
     padding: 20px;
 }
 
+/* === Container & Header === */
 #container {
     max-width: 1200px;
     margin: 20px auto;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    /* Clear floats */
 }
 
-/* Header Styling */
 header {
-    background: #ffffff;
-    /* Darker gradient */
-    color: #ecf0f1;
-    padding: 30px 20px;
+    background: linear-gradient(to right, #fb7fbd, #ffaad4);
+    color: #fff;
     text-align: center;
-    /* Accent color */
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.05);
-    /* Subtle overlay for texture */
-    pointer-events: none;
-    z-index: 1;
+    padding: 30px 20px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 3.8em;
-    /* Larger, more impactful title */
+    font-size: 2.8em;
     font-weight: 700;
-    /* Bold font */
-    letter-spacing: 3px;
-    /* Increased letter spacing */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-    /* Stronger text shadow */
-    text-transform: uppercase;
-    /* All caps for prominence */
-    position: relative;
-    /* To bring text above ::before */
-    z-index: 2;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation Bar Styling */
+/* === Navigation === */
 nav {
-    background: #1f5faa;
-    /* Slightly lighter than header */
+    background: #ff69b4;
     padding: 15px 20px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
-    color: #ecf0f1;
+    color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
+    padding: 10px 18px;
+    margin: 0 8px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
     font-weight: 600;
-    font-size: 1.1em;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
-    background-color: #2b83ea;
-    /* Accent color on hover/active */
-    color: #fff;
+    background-color: #ec4a97;
 }
 
-/* Wrapper and Section Styling */
+/* === Main Layout === */
 #wrapper {
     display: flex;
     flex-wrap: wrap;
-    /* Allows wrapping on smaller screens */
-    padding: 20px;
     gap: 20px;
-    /* Space between main and sidebar */
+    padding: 20px;
 }
 
 #main {
     flex: 3;
-    /* Takes up more space */
     min-width: 60%;
-    /* Ensures it doesn't get too small */
     padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
+.entry img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 15px auto;
+    object-fit: cover;
+    max-height: 350px; /* tambahkan ini supaya gak terlalu tinggi */
+    box-shadow: 0 2px 8px rgba(255, 105, 180, 0.2);
+}
+
 
 #sidebar {
     flex: 1;
-    /* Takes up less space */
-    min-width: 300px;
-    /* Minimum width for sidebar */
+    min-width: 280px;
+    background: #fff0f5;
     padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.2);
 }
 
-/* Widget Box Styling */
+/* === Widget Box === */
 .widget-box {
-    background: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
+    background: #fff;
+    border: 2px solid #ffc1d9;
+    border-radius: 10px;
     margin-bottom: 20px;
     padding: 20px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .widget-box .title {
-    font-size: 1.4em;
-    color: #34495e;
+    font-size: 1.2em;
+    color: #d63384;
     margin-bottom: 15px;
-    border-bottom: 2px solid #1abc9c;
-    padding-bottom: 10px;
+    border-bottom: 2px solid #ff69b4;
+    padding-bottom: 8px;
 }
 
 .widget-box ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
-.widget-box ul li {
-    margin-bottom: 10px;
-}
-
 .widget-box ul li a {
+    color: #ec4a97;
     text-decoration: none;
-    color: #2980b9;
-    transition: color 0.3s ease;
 }
 
 .widget-box ul li a:hover {
-    color: #1abc9c;
     text-decoration: underline;
 }
 
-.widget-box p {
-    font-size: 0.95em;
-    color: #555;
+/* === Search Form === */
+#search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-/* Footer Styling */
+#search-form input[type="text"],
+#search-form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #f9c2d1;
+    background-color: #fff0f5;
+    color: #333;
+    flex-grow: 1;
+}
+
+#search-form button {
+    background-color: #ff69b4;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+#search-form button:hover {
+    background-color: #ec4a97;
+}
+
+/* === Button Add Artikel === */
+.btn-add-girly {
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(255, 105, 180, 0.3);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-add-girly:hover {
+    background-color: #ff85c1;
+    transform: scale(1.05);
+}
+
+/* === Tabel Artikel === */
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin: 20px 0;
+}
+
+.table thead {
+    background: linear-gradient(to right, #fcb1d1, #fce2ef);
+    color: #4b004e;
+    font-weight: bold;
+}
+
+.table th, .table td {
+    padding: 14px;
+    background-color: #fff;
+    border-bottom: 1px solid #f8d4e4;
+}
+
+.table tbody tr {
+    box-shadow: 0 2px 8px rgba(255, 182, 193, 0.2);
+    border-radius: 8px;
+}
+
+.table tbody tr:hover {
+    background-color: #fff0f5;
+}
+
+/* === Gambar Tabel === */
+.table img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(255, 105, 180, 0.3);
+}
+
+/* === Heading Tabel === */
+.tabel-heading-gemoy h3 {
+    text-align: center;
+    font-size: 1.6em;
+    color: #d63384;
+    margin-bottom: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background: linear-gradient(to right, #ffd6e0, #ffe6f0);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(255, 105, 180, 0.1);
+}
+
+/* === Form Artikel (Tambah/Edit) === */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #d63384;
+}
+
+form input[type="text"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f9c2d1;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: #fff0f5;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input[type="submit"],
+form button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+    background-color: #ec4a97;
+}
+
+/* === Footer === */
 footer {
-    background: #000000;
-    color: #ecf0f1;
+    background: #fb7fbd;
+    color: #fff;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
-    border-radius: 0 0 8px 8px;
-    /* Match container border-radius */
+    border-top: 5px solid #ffb6c1;
+    border-radius: 0 0 10px 10px;
 }
 
 footer p {
     margin: 0;
-    font-size: 0.9em;
 }
 
-/* Responsive Adjustments */
+/* === Responsive === */
 @media (max-width: 768px) {
     #wrapper {
         flex-direction: column;
-        /* Stack main and sidebar vertically */
     }
 
     #main,
     #sidebar {
         min-width: 100%;
-        /* Full width on small screens */
     }
 
-    nav a {
-        display: block;
-        margin: 5px 0;
+    #search-form {
+        flex-direction: column;
+    }
+
+    .btn-add-girly {
+        width: 100%;
+        text-align: center;
     }
 }
-
-
-
-/* === Table Styling === */
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.table thead {
-    background-color: #0d6efd;
-    color: white;
-}
-
-.table tfoot {
-    background-color: #0d6efd;
-    color: white;
-}
-
-.table th,
-.table td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ccc;
-}
-
-.table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-/* === Search Form Styling === */
-/* === Search Form Styling === */
-form .form-search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    gap: 10px;
-}
-
-.form-search input[type="text"] {
-    width: 500px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-.form-search .btn-search {
-    padding: 10px 20px;
-    background-color: #0d6efd;
-    color: white;
+.btn-edit-girly {
+    background-color: #fca3cc;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-/* === Button Styling === */
-.btn {
-    padding: 6px 12px;
-    background-color: #999;
     color: white;
-    border: none;
-    border-radius: 4px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
     text-decoration: none;
-    margin-right: 4px;
-    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 2px 5px rgba(255, 105, 180, 0.3);
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #777;
+.btn-edit-girly:hover {
+    background-color: #ff8ac0;
+    transform: scale(1.05);
 }
 
-.btn-danger {
-    background-color: #dc3545;
-}
-
-.btn-danger:hover {
-    background-color: #c82333;
-}
-
-/* === Form Tambah Artikel === */
-form {
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-form label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: bold;
-}
-
-form input[type="text"],
-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    font-size: 14px;
-}
-
-form textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-form button,
-form input[type="submit"] {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #0d6efd;
-    color: white;
+.btn-delete-girly {
+    background-color: #ff6b81;
     border: none;
-    border-radius: 4px;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
     font-weight: bold;
-    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(255, 105, 180, 0.3);
+    transition: background-color 0.3s ease;
 }
 
-form button:hover,
-form input[type="submit"]:hover {
-    background-color: #084298;
+.btn-delete-girly:hover {
+    background-color: #e64455;
+    transform: scale(1.05);
 }
 
 
-/*login form*/
+/* === Login Page Styles === */
 #login-wrapper {
     width: 100%;
     max-width: 400px;
     margin: 100px auto;
     padding: 30px;
-    background-color: #ffffff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background-color: #fff0f6;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+    border-radius: 12px;
+    border: 2px solid #ffc6d9;
 }
 
-/* Title */
 #login-wrapper h1 {
     text-align: center;
     margin-bottom: 25px;
-    color: #333;
+    color: #d63384;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2em;
+    background: linear-gradient(to right, #ffd6e0, #ffe6f0);
+    padding: 10px;
+    border-radius: 8px;
 }
 
-/* Form labels & inputs */
 form .mb-3 {
     margin-bottom: 20px;
 }
 
-label {
+form .mb-3 label {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-weight: bold;
-    color: #444;
+    color: #b8005c;
 }
 
 input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
+    border: 1px solid #f9c2d1;
+    border-radius: 8px;
+    background-color: #fff7fb;
+    font-size: 14px;
 }
 
-/* Button */
-button {
+button[type="submit"] {
     width: 100%;
-    padding: 10px;
-    background-color: #444;
+    padding: 12px;
+    background-color: #ff69b4;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #333;
+button[type="submit"]:hover {
+    background-color: #ff85c1;
 }
 
-/* Alert box */
 .alert {
-    padding: 10px;
-    background-color: #ffdddd;
-    border: 1px solid #ff5c5c;
-    color: #a10000;
-    border-radius: 5px;
+    padding: 12px;
+    background-color: #ffe0eb;
+    border: 1px solid #ff5c8a;
+    color: #a10050;
+    border-radius: 6px;
     margin-bottom: 20px;
+    text-align: center;
 }
