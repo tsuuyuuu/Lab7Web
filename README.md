@@ -194,10 +194,10 @@ Pakai View Layout di CodeIgniter 4 itu sangat membantu untuk buat kerangka tampi
 - Salin file jquery-3.7.1.min.js 
 - Masukkan di Folder public/assets/js
 
-2. **Relasi Tabel di Tampilan Admin**
+2. **Tampilan utama halaman AJAX**
 
 ![Tampilan Halaman AJAX](screenshots/21.png)
 
-3. **Relasi Table Artikel dengan Kategori di Tampilan utama**
+3. **Tambahan Fitur pada AJAX**
 
 ![Fitur Edit data](screenshots/22.png)
