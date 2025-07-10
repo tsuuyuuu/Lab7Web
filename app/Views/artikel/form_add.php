@@ -37,7 +37,7 @@
         </div>
 
         <div style="text-align: right;">
-            <input type="submit" value="Kirim" class="submit" style="padding: 10px 20px; font-weight: bold;">
+            <input type="submit" value="Kirim" class="btn btn-primary" style="padding: 10px 20px; font-weight: bold;">
         </div>
     </form>
 </div>
