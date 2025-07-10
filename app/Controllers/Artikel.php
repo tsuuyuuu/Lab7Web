@@ -74,7 +74,7 @@ class Artikel extends BaseController
 
     public function admin_index()
     {
-       $artikelModel = new ArtikelModel();
+        $model = new ArtikelModel();
         $kategoriModel = new KategoriModel();
 
         $title = 'Manage Article - Admin Panel';
@@ -84,30 +84,23 @@ class Artikel extends BaseController
         $kategori_id = $this->request->getVar('kategori_id');
         $page = $this->request->getVar('page') ?? 1;
 
-        // --- Parameter Sorting ---
-        $sort_by = $this->request->getVar('sort_by') ?? 'artikel.id'; // Default sort by ID
-        $sort_order = $this->request->getVar('sort_order') ?? 'desc'; // Default order DESC
-
-        $builder = $artikelModel->select('artikel.*, kategori.nama_kategori')
-                                ->join('kategori', 'kategori.id_kategori = artikel.id_kategori');
+        $builder = $model->table('artikel')
+            ->select('artikel.*, kategori.nama_kategori')
+            ->join('kategori', 'kategori.id_kategori = artikel.id_kategori');
 
         // Terapkan filter pencarian
-        if (!empty($q)) {
+        if ($q != '') {
             $builder->like('artikel.judul', $q);
         }
 
         // Terapkan filter kategori
-        if (!empty($kategori_id)) {
+        if ($kategori_id != '') {
             $builder->where('artikel.id_kategori', $kategori_id);
         }
 
-        // --- Terapkan Sorting ---
-        // Pastikan kolom yang diurutkan sesuai dengan nama kolom di DB
-        $builder->orderBy($sort_by, $sort_order);
-
         // Dapatkan data artikel dengan pagination
         $artikel = $builder->paginate(10, 'default', $page);
-        $pager = $artikelModel->pager;
+        $pager = $model->pager;
 
         $data = [
             'title' => $title,
@@ -115,8 +108,7 @@ class Artikel extends BaseController
             'pager' => $pager,
             'q' => $q,
             'kategori_id' => $kategori_id,
-            'sort_by' => $sort_by,    // Kirim parameter sorting ke view
-            'sort_order' => $sort_order // Kirim parameter sorting ke view
+
         ];
 
         // Cek apakah request datang dari AJAX

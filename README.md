@@ -188,7 +188,7 @@ Pakai View Layout di CodeIgniter 4 itu sangat membantu untuk buat kerangka tampi
 
 --
 
-## Praktikum 7: Relasi Tabel dan Query Builder 
+## Praktikum 8: AJAX
 
 1. **Menambahkan Pustaka JQuery**
 - Salin file jquery-3.7.1.min.js 
@@ -201,3 +201,15 @@ Pakai View Layout di CodeIgniter 4 itu sangat membantu untuk buat kerangka tampi
 3. **Tambahan Fitur pada AJAX**
 
 ![Fitur Edit data](screenshots/22.png)
+
+--
+
+## Praktikum 9: Implementasi AJAX Pagination dan Search 
+
+1. **Search Bar pada AJAX**
+
+![Tampilan Halaman AJAX](screenshots/24.png)
+
+2. **Filter Shorting pada AJAX**
+
+![Fitur Edit data](screenshots/23.png)
