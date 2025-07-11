@@ -242,19 +242,19 @@ Pakai View Layout di CodeIgniter 4 itu sangat membantu untuk buat kerangka tampi
 ## Praktikum 11: Frontend dengan VueJS 3
 
 
-1. Konfigurasi `index.html`
+1. **Konfigurasi `index.html`**
 
 - Buat file `index.html` di dalam `lab8_vuejs/`.
 - Sertakan CDN untuk **VueJS 3** dan **Axios** di bagian `<head>`.
 - Link ke `assets/css/style.css` dan `assets/js/app.js`.
 
-2. Styling dengan `style.css`
+2. **Styling dengan `style.css`**
 
-3. Logika Aplikasi dengan `app.js` (VueJS)
+3. **Logika Aplikasi dengan `app.js` (VueJS)**
 
 - `apiUrl` nya adalah API CodeIgniter 4 (dari Praktikum 10).
 
-4. Menguji Aplikasi Frontend VueJS
+4. **Menguji Aplikasi Frontend VueJS**
 
 - **Tambah Data**
 ![Menambah data dengan Aplikasi Frontend VueJS ](screenshots/add.png)
