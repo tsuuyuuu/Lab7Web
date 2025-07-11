@@ -213,3 +213,28 @@ Pakai View Layout di CodeIgniter 4 itu sangat membantu untuk buat kerangka tampi
 2. **Filter Shorting pada AJAX**
 
 ![Fitur Edit data](screenshots/23.png)
+
+--
+
+
+## Pratikum 10: API
+
+1. **Menampilkan semua data dengan method GET**
+![Menampilkan semua data dengan method GET ](screenshots/get-all.png)
+
+2. **Menampilkan data berdasarkan ID dengan method GET**
+![Menampilkan data berdasarkan ID dengan method GET ](screenshots/get-8.png)
+
+3. **Mengupdate data dengan method PUT**
+![Mengupdate data dengan method PUT ](screenshots/put-bef.png)
+![Mengupdate data dengan method PUT BERHASIL ](screenshots/put-after.png)
+
+4. **Menambahkan data dengan method POST**
+![Menambahkan data dengan method POST ](screenshots/post-bef.png)
+![Menambahkan data dengan method POST BERHASIL ](screenshots/post-af.png)
+
+5. **Menghapus data dengan method DELETE**
+![Menghapus data dengan method DELETE ](screenshots/del.png)
+![Menghapus data dengan method DELETE BERHASIL ](screenshots/del-af.png)
+
+

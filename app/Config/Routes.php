@@ -5,6 +5,8 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
+ // Routes for the Post controller (RESTful API)
 $routes->resource('post');
 $routes->setAutoRoute(true);
 
@@ -36,4 +38,3 @@ $routes->group('admin', ['filter' => 'auth'], function($routes) {
 // Routes for the Artikel controller
 $routes->get('/artikel', 'Artikel::index');
 $routes->get('/artikel/(:any)', 'Artikel::view/$1');
-
