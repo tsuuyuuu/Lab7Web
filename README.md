@@ -237,4 +237,30 @@ Pakai View Layout di CodeIgniter 4 itu sangat membantu untuk buat kerangka tampi
 ![Menghapus data dengan method DELETE ](screenshots/del.png)
 ![Menghapus data dengan method DELETE BERHASIL ](screenshots/del-af.png)
 
+-- 
 
+## Praktikum 11: Frontend dengan VueJS 3
+
+
+1. Konfigurasi `index.html`
+
+- Buat file `index.html` di dalam `lab8_vuejs/`.
+- Sertakan CDN untuk **VueJS 3** dan **Axios** di bagian `<head>`.
+- Link ke `assets/css/style.css` dan `assets/js/app.js`.
+
+2. Styling dengan `style.css`
+
+3. Logika Aplikasi dengan `app.js` (VueJS)
+
+- `apiUrl` nya adalah API CodeIgniter 4 (dari Praktikum 10).
+
+4. Menguji Aplikasi Frontend VueJS
+
+- **Tambah Data**
+![Menambah data dengan Aplikasi Frontend VueJS ](screenshots/add.png)
+
+- **Ubah Data**
+![Mengubah data dengan Aplikasi Frontend VueJS ](screenshots/edit.png)
+
+- **Hapus Data**
+![Menghapus data dengan Aplikasi Frontend VueJS ](screenshots/del-vue.png)
